@@ -1,0 +1,26 @@
+.filtrage-arrets {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.filtrage-arrets label {
+  font-size: 0.9rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.select-arrets {
+  padding: 8px 12px;
+  border: 2px solid #dcdde1;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.select-arrets:focus {
+  outline: none;
+  border-color: #0a6e31;
+}

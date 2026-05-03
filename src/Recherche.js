@@ -10,6 +10,14 @@ function Recherche({ valeur, onChange }) {
         value={valeur}
         onChange={e => onChange(e.target.value)}
       />
+      {valeur && (  // N'affiche le bouton que si valeur non vide
+        <button
+          className="recherche-bouton-effacer"
+          onClick={() => onChange('')}
+        >
+          ✕ Effacer
+        </button>
+      )}
     </div>
   );
 }

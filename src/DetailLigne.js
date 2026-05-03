@@ -1,11 +1,17 @@
 import './DetailLigne.css';
 
-function DetailLigne({ ligne }) {
+function DetailLigne({ ligne, onClose }) {
   return (
     <div className="detail-ligne">
-      <h3 className="detail-titre">
-        Ligne {ligne.numero} : {ligne.depart} &rarr; {ligne.arrivee}
-      </h3>
+      <div className="detail-header">
+        <h3 className="detail-titre">
+          Ligne {ligne.numero} : {ligne.depart} &rarr; {ligne.arrivee}
+        </h3>
+        <button className="detail-bouton-fermer" onClick={onClose}>
+          ✕
+        </button>
+      </div>
+
       <p className="detail-info">
         {ligne.arrets} arrêts sur ce trajet
       </p>

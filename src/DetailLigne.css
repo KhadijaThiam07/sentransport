@@ -18,10 +18,32 @@
   }
 }
 
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
 .detail-titre {
   color: #0a6e31;
-  margin: 0 0 8px 0;
+  margin: 0;
   font-size: 1.2rem;
+  flex: 1;
+}
+
+.detail-bouton-fermer {
+  background: none;
+  border: none;
+  color: #7f8c8d;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.detail-bouton-fermer:hover {
+  color: #e74c3c;
 }
 
 .detail-info {

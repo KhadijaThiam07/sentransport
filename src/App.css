@@ -42,3 +42,35 @@
     margin-right: 12px;
   }
 }
+.aucune-ligne {
+  background-color: #fef9f3;
+  border: 2px solid #e74c3c;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 16px;
+  text-align: center;
+  color: #e74c3c;
+}
+
+.aucune-ligne p {
+  margin: 8px 0;
+}
+
+.aucune-ligne p:first-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.aucune-ligne p:last-child {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+.compteur-recherches {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
