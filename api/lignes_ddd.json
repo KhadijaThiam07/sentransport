@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "numero": "1",
+    "depart": "Parcelles Assainies",
+    "arrivee": "Plateau",
+    "arrets": 14,
+    "listeArrets": [
+      "Parcelles U14",
+      "Parcelles U10",
+      "Camberene",
+      "Patte d'Oie",
+      "Grand Dakar",
+      "Colobane",
+      "Ponty",
+      "Plateau"
+    ]
+  },
+  {
+    "id": 2,
+    "numero": "7",
+    "depart": "Guediawaye",
+    "arrivee": "Place Obe",
+    "arrets": 18,
+    "listeArrets": [
+      "Guediawaye",
+      "Pikine",
+      "Thiaroye",
+      "Keur Massar",
+      "Grand Yoff",
+      "Parcelles",
+      "Liberte 6",
+      "Place Obe"
+    ]
+  }
+]
