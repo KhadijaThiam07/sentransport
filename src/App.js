@@ -7,6 +7,8 @@ import DetailLigne from './DetailLigne';
 import FiltrageArrets from './FiltrageArrets';
 import Tri from './Tri';
 import Footer from './Footer';
+import Carte from './Carte';
+
 
 function App() {
  
@@ -172,6 +174,7 @@ if (erreur) {
     onClose={() => setLigneSelectionnee(null)}
   />
 )}
+        <Carte />
       </main>
       <Footer />
     </div>
