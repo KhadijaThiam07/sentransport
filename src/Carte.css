@@ -29,3 +29,38 @@
     height: 300px;
   }
 }
+.arrets-proches {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.arrets-proches p {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+}
+
+.arrets-proches ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.arrets-proches li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrets-proches li:last-child {
+  border-bottom: none;
+}
+
+.arrets-proches strong {
+  font-weight: bold;
+}
