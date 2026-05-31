@@ -1,0 +1,126 @@
+.meteo {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.meteo-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.meteo-icone {
+  width: 50px;
+  height: 50px;
+}
+
+.meteo-temp {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-right: 8px;
+}
+
+.meteo-desc {
+  color: #7f8c8d;
+  text-transform: capitalize;
+}
+
+.meteo-humidite {
+  color: #3498db;
+  font-size: 0.85rem;
+  margin-left: auto;
+}
+
+.meteo-alerte {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.alerte-pluie {
+  background: #fff3e0;
+  color: #e65100;
+  border-left: 4px solid #e65100;
+}
+
+.alerte-orage {
+  background: #fce4ec;
+  color: #c62828;
+  border-left: 4px solid #c62828;
+}
+
+.meteo-erreur {
+  border-left: 4px solid #e74c3c;
+}
+
+.meteo-detail {
+  color: #e74c3c;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+.meteo-previsions {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #dcdde1;
+}
+
+.previsions-titre {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 12px 0;
+}
+
+.previsions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 8px;
+}
+
+.prevision-card {
+  background: #f8f9fa;
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  padding: 8px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.prevision-card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-color: #3498db;
+}
+
+.prevision-date {
+  font-size: 0.75rem;
+  color: #7f8c8d;
+  margin: 0 0 4px 0;
+  font-weight: 600;
+}
+
+.prevision-icone {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+}
+
+.prevision-temp {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 4px 0;
+}
+
+.prevision-desc {
+  font-size: 0.75rem;
+  color: #7f8c8d;
+  text-transform: capitalize;
+  margin: 0;
+}

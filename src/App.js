@@ -8,11 +8,13 @@ import FiltrageArrets from './FiltrageArrets';
 import Tri from './Tri';
 import Footer from './Footer';
 import Carte from './Carte';
+import Meteo from './Meteo';
+import SignalerIncident from './SignalerIncident';
+import ListeIncidents from './ListeIncidents';
 
 
 function App() {
- 
-  const [lignes, setLignes] = useState([]);
+  const [lignes, setLignes] = useState([]);  
   const [chargement, setChargement] = useState(true);
   const [erreur, setErreur] = useState(null);
   
@@ -41,14 +43,22 @@ function App() {
       });
   }, []);
 
-  // FILTRAGE : garde seulement les lignes qui contiennent le texte
- const lignesFiltrees = lignes.filter(l =>
-  (l.depart.toLowerCase().includes(recherche.toLowerCase()) ||
-   l.arrivee.toLowerCase().includes(recherche.toLowerCase()) ||
-   l.numero.includes(recherche))
-  &&
-  l.arrets >= parseInt(minArrets)  // ← NOUVEAU FILTRE
-);
+// FILTRE : garde seulement les lignes qui contiennent le texte recherché
+const lignesFiltrees = lignes && Array.isArray(lignes) ? lignes.filter(l => {
+  if (!l || !l.depart || !l.arrivee || !l.numero) return false;
+  
+  // Si recherche est vide, affiche TOUTES les lignes
+  if (!recherche || recherche.trim() === "") {
+    return l.arrets >= parseInt(minArrets);
+  }
+  
+  // Sinon, filtre par recherche
+  return (l.depart.toLowerCase().includes(recherche.toLowerCase()) ||
+          l.arrivee.toLowerCase().includes(recherche.toLowerCase()) ||
+          l.numero.includes(recherche)) &&
+         l.arrets >= parseInt(minArrets);
+}) : [];
+
 let lignesAffichees = [...lignesFiltrees]; 
 if (tri === 'numero') {
   lignesAffichees.sort((a, b) => parseInt(a.numero) - parseInt(b.numero));
@@ -116,6 +126,7 @@ if (erreur) {
   return (
     <div className="App">
       <Header />
+      <Meteo />
       <main className="contenu">
         {/* Champ de recherche */}
         <Recherche valeur={recherche} onChange={handleRecherche} />
@@ -174,7 +185,9 @@ if (erreur) {
     onClose={() => setLigneSelectionnee(null)}
   />
 )}
-        <Carte />
+        {/* <Carte /> */}
+        <SignalerIncident />
+         <ListeIncidents />
       </main>
       <Footer />
     </div>
